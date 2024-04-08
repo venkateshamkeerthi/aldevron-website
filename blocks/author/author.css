@@ -1,0 +1,132 @@
+.author {
+    margin: 1.5rem 0;
+    border: 1px solid #999;
+}
+
+.author .tablist {
+    background-color: #999;
+    display: block!important;
+}
+
+.author .mmg-tabs .tab {
+    border: none!important;
+    border-radius: 0!important;
+    font-size: 15px!important;
+    color: #fff!important;
+    background-color: #999!important;
+}
+
+.author .mmg-tabs .tab.active {
+    color: #1A1919!important;
+    background-color: #fff!important;
+}
+
+.author .mmg-tabs .tab.active:hover {
+    color: #1A1919!important;
+    background-color: #fff!important;
+}
+
+.author .mmg-tabs .tabpanel {
+    border: none;
+}
+
+.author .mmg-tabs .tabpanel img {
+    border-radius: 50%;
+    border: 1px solid #CCC;
+    height: auto;
+}
+
+.author p {
+    padding: 0;
+}
+
+.author .author-info h4 {
+    padding-top: 0
+}
+
+.author .author-info h4 a:hover{
+    color: var(--link-color);
+}
+
+.author #author-profile {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.author .author-avatar {
+    width: 25%;
+}
+
+.author .author-avatar img {
+    width: 100%;
+    height: auto;
+}
+
+.author .author-info.has-avatar {
+    width: 75%;
+}
+
+.author .author-recent-posts {
+    font-size: 14px;
+    line-height: normal
+}
+
+.author .author-recent-posts .post {
+    padding: .4em 0
+}
+
+.author .date {
+    padding-left: .5em;
+    color: #b8bec1;
+    font-size: 14px!important;
+}
+
+.author #latest-post-panel a {
+    font-size: 14px;
+}
+
+.author .tabpanel li {
+    padding: 0 16px;
+}
+
+.author .tabpanel li::before {
+    top: 0.2rem!important;
+}
+
+@media(max-width: 414px) {
+    .author .tablist {
+        display: flex!important;
+    }
+
+    .author #author-profile {
+        flex-direction: column;
+    }
+
+    .author .author-info h4 {
+        text-align: center
+    }
+
+    .author .author-avatar {
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding-bottom: 1em
+    }
+
+    .author .author-info.has-avatar {
+        width: 100%;
+    }
+
+    .author .author-avatar img {
+        width: 80%;
+        max-width: 300px;
+        margin: 0 auto
+    }
+
+    .author .author-info,.author-info.has-avatar {
+        display: block;
+        width: 100%
+    }
+}

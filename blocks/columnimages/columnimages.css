@@ -1,0 +1,42 @@
+.cols-row, .cols2-row, .cols3-row {
+    clear: both;
+    display: block;
+    width: 100%;
+}
+
+.hs_cos_wrapper_widget {
+    border-top: 3px solid #f8f8f8;
+    padding: 6% 0;
+}
+
+.cols2-row .col1 {
+    float: left;
+    width: 47%;
+}
+
+.cols2-row .col2 {
+    float: right;
+    width: 47%;
+}
+
+@media (max-width: 860px){
+.cols3-row .col1, .cols3-row .col2, .cols3-row .col3 {
+    clear: both;
+    display: block;
+    float: none;
+    margin: 0;
+    width: 100%;
+}
+
+.cols3-row .col2, .cols3-row .col3 {
+    padding-top: 35px;
+}
+}
+
+@media (max-width: 767px){
+.cols2-row .col1, .cols2-row .col2{
+    display: block;
+    float: none;
+    width: 100%;
+}
+}

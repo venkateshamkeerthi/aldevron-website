@@ -1,0 +1,308 @@
+:root {
+    --blur: 3px;
+    --unblur: 0;
+    --scale: 1.5;
+    --unscale: 1;
+    --grayscale: 100%;
+    --ungrayscale: 0%;
+    --transition: 0.3s ease-in-out
+}
+
+.hs-image__grid__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    list-style-type: none;
+    padding-left: 0
+}
+
+.hs-image__grid__list__item {
+    flex-basis: calc(30%);
+    margin: 0!important;
+    overflow: hidden;
+    position: relative;
+    padding: 0!important;
+}
+
+.hs-image__grid__list .hs-image__grid__list__item::before {
+    content: ''!important;
+}
+
+button.hs-image__grid__list__item__button {
+    all: unset;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block
+}
+
+button.hs-image__grid__list__item__button:focus {
+    outline: 3px solid #0bf;
+    outline-offset: 3px
+}
+
+button.hs-image__grid__list__item__button:focus:not(:focus-visible) {
+    outline: none
+}
+
+.hs-image__grid__list__item__image {
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    vertical-align: middle;
+    width: 100%
+}
+
+.hs-image__grid__item__overlay {
+    align-items: center;
+    background-color: hsla(0deg,0%,100%,0%);
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    transition: background-color .5s,opacity .5s;
+    width: 100%
+}
+
+.hs-image__grid__item__overlay:hover {
+    background-color: hsla(0deg,0%,100%,60%);
+    opacity: 1
+}
+
+.hs-image__grid__item__overlay__content {
+    max-height: 100%;
+    opacity: 1;
+    text-align: center;
+    width: 100%
+}
+
+.hs-image__grid__item__overlay__content * {
+    margin: initial;
+    padding: initial
+}
+
+.hs-image__grid__item__overlay__content--fit {
+    display: inline-block;
+    white-space: nowrap;
+    width: 100%
+}
+
+.hs-image__grid__item__overlay__content .hs-image__grid__item__overlay__content--fit * {
+    font-size: inherit!important
+}
+
+.hs-image__grid__item__image--zoom_out {
+    transform: scale(var(--scale));
+    transition: var(--transition)
+}
+
+.hs-image__grid__list__item:hover .hs-image__grid__item__image--zoom_out {
+    transform: scale(var(--unscale))
+}
+
+.hs-image__grid__item__image--blur {
+    filter: blur(var(--unblur));
+    transition: var(--transition)
+}
+
+.hs-image__grid__list__item:hover .hs-image__grid__item__image--blur {
+    filter: blur(var(--blur))
+}
+
+.hs-image__grid__item__image--grayscale {
+    filter: grayscale(var(--ungrayscale));
+    transition: var(--transition)
+}
+
+.hs-image__grid__list__item:hover .hs-image__grid__item__image--grayscale {
+    filter: grayscale(var(--grayscale))
+}
+
+.hs-image__grid__lightbox {
+    align-items: center;
+    display: flex;
+    justify-items: center
+}
+
+.hs-image__grid__lightbox__image {
+    max-height: 90vh;
+    max-width: 90vw
+}
+
+.hs-image__grid__lightbox__button {
+    height: 48px;
+    width: 48px
+}
+
+.hs-image__grid__lightbox__button,.hs-image__grid__lightbox__button__icon {
+    align-items: center;
+    display: flex;
+    justify-items: center
+}
+
+.hs-image__grid__lightbox__button--close {
+    all: unset;
+    background: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    height: 48px;
+    position: absolute;
+    right: -40px;
+    text-align: center;
+    top: -40px;
+    width: 48px
+}
+
+.hs-image__grid__lightbox__button--close:hover {
+    all: unset;
+    background: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    height: 48px;
+    position: absolute;
+    right: -40px;
+    text-align: center;
+    top: -40px;
+    width: 48px
+}
+
+button.hs-image__grid__lightbox__button--close:focus {
+    outline: 3px solid #0bf;
+    outline-offset: 3px
+}
+
+button.hs-image__grid__lightbox__button--close:focus:not(:focus-visible) {
+    outline: none
+}
+
+button.hs-image__grid__lightbox__button {
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    align-items: center;
+    background: #ccc;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    height: 1.5em;
+    justify-content: center;
+    opacity: .7;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.5em;
+    z-index: 1;
+    font-weight: bolder;
+    color: #000;
+}
+
+button.hs-image__grid__lightbox__button svg {
+    fill: #000;
+    height: 1.2em;
+    width: 1.2em
+}
+
+button.hs-image__grid__lightbox__button:hover:not(:disabled) {
+    opacity: .9
+}
+
+button.hs-image__grid__lightbox__button:disabled {
+    opacity: .3
+}
+
+button.hs-image__grid__lightbox__button:focus {
+    outline: 3px solid #0bf;
+    outline-offset: 3px
+}
+
+button.hs-image__grid__lightbox__button:focus:not(:focus-visible) {
+    outline: none
+}
+
+button.hs-image__grid__lightbox__button--prev {
+    left: 1em
+}
+
+button.hs-image__grid__lightbox__button--next {
+    right: 1em
+}
+
+button.hs-image__grid__lightbox__button--hide {
+    display: none
+}
+
+.basicLightbox {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,80%);
+    opacity: .01;
+    transition: opacity .4s ease;
+    z-index: 1000;
+    will-change: opacity
+}
+
+.basicLightbox--visible {
+    opacity: 1;
+}
+
+.basicLightbox__placeholder {
+    max-width: 100%;
+    transform: scale(.9);
+    transition: transform .4s ease;
+    z-index: 1;
+    will-change: transform
+}
+
+.basicLightbox__placeholder>iframe:first-child:last-child,.basicLightbox__placeholder>img:first-child:last-child,.basicLightbox__placeholder>video:first-child:last-child {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    max-width: 95%;
+    max-height: 95%
+}
+
+.basicLightbox__placeholder>iframe:first-child:last-child,.basicLightbox__placeholder>video:first-child:last-child {
+    pointer-events: auto
+}
+
+.basicLightbox__placeholder>img:first-child:last-child,.basicLightbox__placeholder>video:first-child:last-child {
+    width: auto;
+    height: auto
+}
+
+.basicLightbox--iframe .basicLightbox__placeholder,.basicLightbox--img .basicLightbox__placeholder,.basicLightbox--video .basicLightbox__placeholder {
+    width: 100%;
+    height: 100%;
+    pointer-events: none
+}
+
+.basicLightbox--visible .basicLightbox__placeholder {
+    transform: scale(1)
+}
+
+.hs-image__grid__container {
+    margin-top:40px;
+    margin-bottom:40px;
+}
+  
+.hs-image__grid__list__item,
+.hs-image__grid__list__item__image { aspect-ratio:16/9; }

@@ -1,0 +1,203 @@
+/* Container styles */
+.timeline-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 70px;
+    overflow: hidden;
+  }
+
+  /* Slider styles */
+  .timeline-slide #year-slider {
+    display: flex;
+    overflow: hidden;
+    transform: translate3d(43%, 0, 0);
+    transition: 0.5s all ease-in-out;
+    transition-duration: 500ms;
+    padding-bottom: 20px;
+  }
+
+  .timeline-slide .year {
+    cursor: pointer;
+    border-radius: 5px;
+    color: #dbdbdb;
+    font-size: 40px;
+    font-weight: 700;
+    transition: 0.3s all ease-in-out;
+    text-align: center;
+    width: 160px;
+  }
+
+  .timeline-slide .year.active {
+    color: #f49600;
+    transition: 0.3s all ease-in-out;
+  }
+
+  /* Content area styles */
+  .timeline-slide #content-slider-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .timeline-slide #content-slider {
+    /* width: 100%; */
+    display: flex;
+    align-items: center;
+    min-height: 250px;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .timeline-slide #content-slider li::before {
+    color: var(--primary-color);
+    content: "\25A0";
+    font-family: Arial;
+    font-size: 1em;
+    left: 0;
+    line-height: 100%;
+    position: absolute;
+    top: 0.45em;
+}
+
+.timeline-slide .year-content {
+    display: none;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .timeline-slide .year-content.active {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* buttons  */
+  .timeline-slide .button-container {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .timeline-slide .button-container .hide {
+    opacity: .35;
+    cursor: auto;
+    pointer-events: none;
+  }
+
+  .timeline-slide .button-prev {
+    border: 2px solid #f49600;
+    border-radius: 50%;
+    color: #f49600;
+    cursor: pointer;
+    height: 50px;
+    text-align: center;
+    transition: all .3s;
+    user-select: none;
+    width: 50px;
+    position: relative;
+    float: left;
+    margin: 15px;
+  }
+
+  .timeline-slide .button-prev::after {
+    content: '';
+    border: 2px solid #f49600;
+    border-width: 0 2px 2px 0;
+    transform: rotate(135deg);  /* Rotates the arrow to point left */
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    right: 0;
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+  }
+
+  .timeline-slide .button-next {
+    border: 2px solid #f49600;
+    border-radius: 50%;
+    color: #f49600;
+    cursor: pointer;
+    height: 50px;
+    text-align: center;
+    transition: all .3s;
+    user-select: none;
+    width: 50px;
+    position: relative;
+    float: right;
+    margin: 15px;
+  }
+
+
+
+  .timeline-slide .button-next:hover {
+    background-color: #f49600;
+  }
+
+  .timeline-slide .button-next:hover::after {
+    border-color: #fff;
+  }
+
+
+  .timeline-slide .button-prev:hover {
+    background-color: #f49600;
+  }
+
+  .timeline-slide .button-prev:hover::after {
+    border-color: #fff;
+  }
+
+  .timeline-slide .button-next::after {
+    content: '';
+    border: 2px solid #f49600;
+    border-width: 0 2px 2px 0;
+    transform: rotate(315deg);  /* Rotates the arrow to point left */
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    right: 0;
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+  }
+
+  @media (min-width: 767px) and (max-width: 860px) {
+    .timeline-slide #content-slider {
+      padding: 0 80px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .timeline-slide {
+      padding: 60px 0;
+    }
+
+    .timeline-slide #content-slider {
+      margin: 0 30px;
+    }
+
+    .timeline-slide .button-container {
+        position: relative;
+        justify-content: center;
+        margin-top: 32px;
+        height: 54px;
+    }
+
+    .timeline-slide .button-prev {
+      margin-right: 5px;
+    }
+
+    .timeline-slide .year {
+      width: 150px;
+    }
+  }

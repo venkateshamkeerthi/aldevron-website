@@ -1,0 +1,12 @@
+div.episode h3.episode_name {
+    font-size: 28px !important;
+}
+
+div.episode div.meta {
+   padding-top: 0 !important;
+}
+
+div.episode div.meta p {
+    padding-bottom: 0 !important;
+    display: inline !important;
+}

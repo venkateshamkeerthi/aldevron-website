@@ -1,0 +1,28 @@
+.sidebar-navigation {
+    padding: 7%;
+    margin-top: 25px;
+    background-color: transparent;
+    border: none;
+    box-shadow: 0 2px 15px rgba(0 0 0 / 10%);
+    border-radius: 4px;
+    display: block;
+}
+
+.sidebar-navigation ul li::before {
+    content: ''!important;
+}
+
+.sidebar-navigation ul li {
+    padding-left: 0!important;
+    font-size: 16px!important;
+    color: #0d233e!important;
+}
+
+.sidebar-navigation ul li.active {
+    padding-left: 0!important;
+}
+
+.sidebar-navigation ul li a {
+    font-size: 16px!important;
+    color: #0d233e!important;
+}

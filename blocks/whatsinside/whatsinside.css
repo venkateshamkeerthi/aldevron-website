@@ -1,0 +1,79 @@
+.whatsinside {
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.whatsinside .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2.75rem;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.whatsinside .wrapper .whats-inside_block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.whatsinside .wrapper .whats-inside_block .whats-inside_block-image {
+    width: 15%;
+}
+
+.whatsinside .wrapper .whats-inside_block .whats-inside_block-image img {
+    margin-top: 1rem;
+    width: 60px;
+    height: auto;
+}
+
+.whatsinside .wrapper .whats-inside_block .whats-inside_block-content {
+    width: 82%;
+    text-align: left;
+    color: #2E2B31;
+    font-family: helvetica;
+    margin-top: 1rem;
+}
+
+.whatsinside .wrapper .whats-inside_block .whats-inside_block-content h3{
+    font-size: 1.25rem;
+    letter-spacing: .25rem;
+    font-weight: 700;
+    hyphens: auto;
+    line-height: 1.28;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.whatsinside .wrapper .whats-inside_block .whats-inside_block-content p{
+    line-height: 28px;
+    margin-bottom: 0;
+    margin-top: 1rem;
+    padding: 0;
+}
+
+@media only screen and (max-width: 767px) {
+    .whatsinside .wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 0;
+    }
+
+    .whatsinside .wrapper .whats-inside_block {
+        flex-direction: column;
+        margin-bottom: 40px;
+        justify-content: flex-start;
+    }
+
+    .whatsinside .wrapper .whats-inside_block .whats-inside_block-image {
+        width: 100%;
+    }
+
+    .whatsinside .wrapper .whats-inside_block .whats-inside_block-content {
+        width: 100%;
+    }
+}

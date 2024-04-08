@@ -15,4 +15,14 @@ export default function decorate(block) {
       }
     });
   });
+
+  // set images hyperlink here
+  const images = block.querySelectorAll('picture');
+  images.forEach((image) => {
+    const { nextSibling } = image;
+    if (nextSibling.tagName === 'A' && nextSibling.href === nextSibling.innerText.trim()) {
+      nextSibling.innerText = '';
+      nextSibling.appendChild(image);
+    }
+  });
 }

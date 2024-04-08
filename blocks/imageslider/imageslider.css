@@ -1,0 +1,598 @@
+/*
+  Default imageslider Styling.
+  Same as .products on the landing page.
+  Variant stylings can be found below.
+*/
+
+/* stylelint-disable no-descending-specificity */
+
+main div.imageslider-wrapper {
+    /* width: 100%; */
+     position: relative;
+     max-width: unset;
+     margin-bottom: 70px;
+   }
+   
+   main div.imageslider-wrapper:last-child {
+     margin-bottom: 0 !important;
+   }
+   
+   main .imageslider {
+     box-sizing: border-box;
+     display: flex;
+     overflow: hidden;
+     margin: auto;
+     width: 90%;          /* default - same as .products */
+     padding : 10px 315px;
+   }
+   
+   main .imageslider-item {
+     position:relative;
+     box-sizing: border-box;
+     width: 250px;
+     margin-right: 10px;
+     flex: 1 0 auto;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 0;     /* default - same as .products */
+   }
+   
+   main .imageslider-item-columns-container {
+     width: 100%;
+     align-items: center;
+     justify-content: center;
+   }
+   
+   main .imageslider-item-image img {
+     display: block;
+     width: 100%;       /* default - same as .products */
+   }
+   
+   main .imageslider.full-bg .imageslider-item {
+     position: relative;
+     border-width: 1px;
+   }
+   
+   main .imageslider-item-text h3 {
+     font-size: 32px;
+     font-weight: lighter;
+   }
+   
+   main .imageslider-item-text .button-container {
+     display: inline-block;
+     margin-top: 0;
+   }
+   
+   main .imageslider.full-bg .imageslider-item-text .button-container {
+     width: 100%;
+     max-width: 80%;
+   }
+   
+   main .imageslider.full-bg .primary {
+     width: 100%;
+   }
+   
+   main .imageslider-item-text .button-container .secondary {
+     margin-left: 15px;
+   }
+   
+   main .imageslider-nav-button {
+     z-index: 99;
+     min-width: unset;
+     padding: 6px 4px 4px;
+     border-radius: 50%;
+     position: absolute;
+     top: 88%;
+     margin:0 -15px;
+     transform: translate(0, -50%);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     color: #fff;               /* default - same as .products */
+     border: 1.5px solid #adb3b7;  /* default - same as .products */
+     background-color: #adb3b7;      /* default - same as .products */
+     font-weight: bolder;
+     height: 15px;
+     width: 17px;
+     text-decoration: none;
+     transition: 0.2s all ease-in-out;
+     cursor: pointer;
+   }
+ 
+   main .imageslider-nav-button:hover {
+     z-index: 99;
+     min-width: unset;
+     border-radius: 50%;
+     position: absolute;
+     top: 88%;
+     margin:0 -15px;
+     transform: translate(0, -50%);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     color: #fff;
+     border: 1.5px solid #a3a3a3;
+     background-color: #a3a3a3;
+     font-weight: bolder;
+     text-decoration: none;
+     transition: 0.2s all ease-in-out;
+   }
+   
+   main .imageslider-nav-button.disabled {
+     display: none;
+   }
+   
+   main .imageslider-nav-button .icon {
+     height: 38px;
+     width: 38px;
+     stroke-width: 20;
+   }
+   
+   main .imageslider-nav-left {
+     left: 20px;
+   }
+   
+   main .imageslider-nav-right {
+     right: 20px;
+   }
+   
+   main .imageslider-dot-buttons {
+     display: flex;
+     justify-content: center;
+     gap: 10px;
+     min-width: unset;
+     margin-top: 20px;
+   }
+   
+   main .imageslider-dot-button {
+     min-width: unset;
+     height: 20px;
+     width: 20px;
+     background-color: transparent;
+     border: 1px solid #cacaca;
+     border-radius: 50%;
+     padding: 0;
+   }
+   
+   main .imageslider-dot-button.selected {
+     background-color: #cacaca;
+     border: 0;
+   }
+   
+   @media only screen and (max-width: 1023px) {
+     main .imageslider {
+       padding-left: 33%;
+       padding-right: 0; 
+     }
+ 
+     main .imageslider-nav-button {
+       margin:0 -5px;
+     }
+   
+     main .imageslider-nav-button:hover {
+       margin:0 -5px;
+     }
+   }
+   
+   @media only screen and (min-width: 992px) {
+     main .imageslider.full-bg .primary {
+       background-color: transparent;
+       border: 1px solid #fff;
+     }
+   
+     main .imageslider.full-bg .primary:focus {
+       color: #fff;
+     }
+   
+     main .imageslider.full-bg .primary:hover {
+       color: var(--link-hover-color);
+       background-color: #fff;
+     }
+   
+     main .imageslider.full-bg .primary:hover .button-border{
+       display: none;
+     }
+   
+     main .imageslider.full-bg .imageslider-item-column:first-child {
+       position: absolute;
+       width: 100%;
+       left: 0;
+       top: 0;
+       padding: 0;
+     }
+   
+     main .imageslider.full-bg .imageslider-item-column:last-child {
+       color: #fff;
+       position: relative;
+       display: flex;
+       align-items: center;
+     }
+   
+     main .imageslider.full-bg .imageslider-item-column:first-child ,
+     main .imageslider.full-bg .imageslider-item-image,
+     main .imageslider.full-bg .imageslider-item-image .picture,
+     main .imageslider.full-bg .imageslider-item-image img {
+       height: 100%;
+     }
+   
+     main .imageslider.full-bg .imageslider-item-columns-container {
+       justify-content: flex-end;
+       min-height: 500px;
+     }
+   
+     main .imageslider.full-bg .imageslider-item-image img {
+       object-fit: cover;
+       max-height: 100%;
+     }
+   
+     main .imageslider.full-bg .imageslider-item-column:first-child .picture:last-child {
+       display: none;
+     }
+   }
+   
+   @media only screen and (max-width: 991px) {
+     main .imageslider-item-columns-container {
+       flex-direction: column;
+       gap: 30px;
+     }
+   
+     main .imageslider-item-column {
+       width: 100%;
+       padding: 0;
+       align-items: center;
+     }
+   
+     main .imageslider.full-bg .imageslider-item-column:first-child .picture:first-child {
+       display: none;
+     }
+   }
+   
+   @media only screen and (max-width: 767px) {
+     main .imageslider {
+       padding-left: 33%;
+       padding-right: 0;
+     }
+   
+     main .imageslider-item {
+       padding: 0;
+     }
+   
+     main .imageslider-item-text h3 {
+       font-size: 24px;
+     }
+   
+     main .imageslider-item-text .button-container {
+       margin-top: 20px;
+       margin-bottom: 0;
+       max-width: 100%;
+       width: 100%;
+     }
+   
+     main .imageslider-item-text .button-container .button {
+       max-width: 100%;
+       width: 100%;
+       font-size: 12px;
+     }
+   
+     main .imageslider-nav-button .icon {
+       height: 26px;
+       width: 26px;
+     }
+   
+     main .imageslider-nav-button {
+     padding: 2px;
+     height: 15px;
+     margin:0 -10px;
+   }
+ 
+   main .imageslider-nav-button:hover {
+     padding: 2px;
+     height: 15px;
+     margin:0 -10px;
+   }
+   }
+   
+   @media only screen and (max-width: 576px) {
+     main .imageslider-item-text .button-container {
+       margin-bottom: 0;
+     }
+   
+     main .imageslider-item-text .button-container .button {
+       margin-left: 0;
+     }
+   }
+   
+   @media only screen and (max-width: 420px) {
+     main .imageslider-item-text .button-container {
+       max-width: unset !important;
+       display: block;
+     }
+   
+     main .imageslider-item-text .button-container .button {
+       max-width: unset !important;
+     }
+   
+     main .imageslider a.button {
+       display: block;
+     }
+   }
+   
+   /* WAVE imageslider variant */
+   main div.imageslider-wrapper.wave {
+     width: 1170px;
+   }
+   
+   main .imageslider.wave {
+     padding: 0;
+   }
+   
+   main .imageslider.wave .imageslider-item-columns-container {
+     gap: 2em;
+   }
+   
+   main .imageslider.wave .imageslider-item  {
+     padding: 20px 15px;
+     height: 100%;
+   }
+   
+   main .imageslider.wave .imageslider-item-column {
+     width: unset;
+     padding: 0;
+   }
+   
+   main .imageslider.wave .imageslider-item-image img {
+     height: 353px;
+     width: 330px;
+   }
+   
+   main .imageslider.wave .imageslider-item-text {
+     margin-top: 13%;
+     max-width: 597px;
+     padding-right: 15px;
+     text-align: center;
+     position: relative;
+   }
+   
+   main .imageslider.wave .imageslider-item-text p {
+     color: var(--text-white);
+     font-size: 27px;
+   }
+   
+   main .imageslider.wave .imageslider-item-text .button-container a.secondary,
+   main .imageslider.wave .imageslider-item-text .button-container a.secondary:hover {
+     background-color: transparent;
+     color: var(--text-white);
+     border: 1.5px solid var(--text-white);
+   }
+   
+   main .imageslider-wrapper.wave .imageslider-dot-buttons {
+     margin-top: 0;
+   }
+   
+   main .imageslider-wrapper.wave .imageslider-dot-button {
+     background-color: var(--background-color);
+   }
+   
+   main .imageslider-wrapper.wave .imageslider-nav-button:hover {
+     color: #adb3b7;
+     border: 1.5px solid #adb3b7;
+     background-color: inherit;
+   }
+   
+   @media only screen and (max-width: 1200px) and (min-width: 992px) {
+     main div.imageslider-wrapper.wave {
+       width: 970px;
+     }
+   
+     main .imageslider.wave {
+       max-width: 90%;
+       height: auto;
+       margin: auto;
+     }
+   
+     main .imageslider.wave .imageslider-item-columns-container {
+       gap: 1em;
+     }
+   
+     main .imageslider.wave .imageslider-item-text {
+       max-width: 530px;
+     }
+   
+     main .imageslider.wave .imageslider-item-image img {
+       height: 310px;
+       width: 200px;
+     }
+   }
+   
+   @media only screen and (max-width: 992px) {
+     main div.imageslider-wrapper.wave {
+       width: 750px;
+     }
+   
+     main .imageslider.wave .imageslider-item-image img {
+       display: none;
+     }
+   }
+   
+   @media only screen and (max-width: 767px) {
+     main div.imageslider-wrapper.wave {
+       width: 100%;
+     }
+   
+     main .imageslider.wave {
+       /*
+         Ugly hack because you cannot mix overflow-x: hidden with overflow-y: visible
+         https://stackoverflow.com/a/39554003
+       */
+       padding-top: 170px;
+       margin-top: -170px;
+     }
+   
+     main .imageslider.wave .imageslider-item {
+       position: relative;
+       padding: 0 30px;
+       max-width: 90%;
+     }
+   
+     main .imageslider.wave .imageslider-item-columns-container {
+       gap: 0;
+     }
+   
+     main .imageslider.wave .imageslider-item-image img {
+       max-width: unset;
+       display: block;
+       height: 290px;
+       width: 260px;
+       flex-shrink: 0;
+     }
+   
+     main .imageslider.wave .imageslider-item-image {
+       position: absolute;
+       left: 50%;
+       transform: translate3d(0 0 0);
+       transition-duration: 0ms;
+       opacity: 1;
+       margin: auto;
+       display: block;
+       top: -180px;
+     }
+   
+     main .imageslider.wave .imageslider-item-text {
+       margin-top: 140px;
+       padding-right: 0;
+       padding-left: 0;
+       padding-bottom: 25px;
+       max-width: unset;
+     }
+   
+     main .imageslider-wrapper.wave .imageslider-dot-buttons {
+       margin-bottom: 25px;
+     }
+   }
+   
+   /* WAVE Blue Variant */
+   main div.imageslider-wrapper.wave.blue .imageslider-dot-button.selected {
+     background-color: #23bfd9;
+   }
+   
+   /* WAVE BlueGreen Variant */
+   main div.imageslider-wrapper.wave.bluegreen .imageslider-dot-button.selected {
+     background-color: #86c440;
+   }
+   
+   main .imageslider .imageslider-item-text blockquote {
+     margin: 0;
+     position: static;
+   }
+   
+   main .imageslider .imageslider-item .imageslider-item-text blockquote ~ p,
+   main .imageslider .imageslider-item .imageslider-item-text blockquote > p {
+     padding: 0;
+     font-style: normal;
+     font-size: 23px;
+     line-height: 28px;
+   }
+   
+   main .imageslider .imageslider-item .imageslider-item-text blockquote > p::before,
+   main .imageslider .imageslider-item .imageslider-item-text blockquote > p::after {
+     content: none;
+   }
+   
+   main .imageslider blockquote::before,
+   main .imageslider blockquote::after {
+     content: "";
+     position: absolute;
+     width: 100px;
+     height: 100px;
+     background-position: center;
+     background-size: 100px;
+     background-repeat: no-repeat;
+   }
+   
+   main .imageslider blockquote::before {
+     background-image: url('/images/quote-left.png');
+     left: -50px;
+     top: -89px;
+   }
+   
+   main .imageslider blockquote::after {
+     background-image: url('/images/quote-right.png');
+     right: -1.5em;
+     bottom: -60px;
+   }
+   
+   @media only screen and (max-width: 992px) {
+     main .imageslider blockquote::before,
+     main .imageslider blockquote::after {
+       width: 33px;
+       height: 33px;
+       background-size: 33px;
+     }
+   
+     main .imageslider blockquote::before {
+       left: -8px;
+       top: -35px;
+     }
+   
+     main .imageslider blockquote::after {
+       right: 0;
+       bottom: 0;
+     }
+   }
+   
+   @media only screen and (max-width: 767px) {
+     main .imageslider .imageslider-item .imageslider-item-text blockquote > p {
+       font-size: 16px;
+     }
+   
+     main .imageslider .imageslider-item .imageslider-item-text blockquote + p {
+       font-size: 18px;
+     }
+   }
+   
+   main .block.imageslider.full-size .imageslider-item-column {
+     width: auto;
+   }
+   
+   main .block.imageslider.full-size .imageslider-item-image img {
+     max-height: none;
+   }
+ 
+   .imageslider-main {
+     box-sizing: border-box;
+     display: flex;
+     overflow: hidden;
+     margin: auto;
+     width: 90%;
+     padding: 20px 0;
+ }
+ 
+ .imageslider-main .imageslider-item {
+   position:relative;
+   box-sizing: border-box;
+   width: 100%;
+   margin-right: 0;
+   flex: 1 0 auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 0;     /* default - same as .products */
+ }
+ 
+ .imageslider-main .imageslider-item-columns-container {
+   width: 100%;
+   align-items: center;
+   justify-content: center;
+ }
+ 
+ .imageslider-main .imageslider-item-column {
+    width: 100%; 
+ }
+ 
+ .imageslider-main .imageslider-item-image img {
+   display: block;
+   object-fit: contain;
+   width: 100%;       /* default - same as .products */
+   height: auto;/* default - same as .products */
+ }

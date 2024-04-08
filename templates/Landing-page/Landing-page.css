@@ -1,0 +1,58 @@
+.landing-section .float-left {
+    width: 48%;
+    float: left;
+}
+
+.landing-section .float-right {
+    float: right;
+    width: 48%;
+}
+
+.landing-section ul li::before {
+    color: var(--primary-color);
+    content: "\25A0";
+    font-size: 1em;
+    left: 0;
+    line-height: 100%;
+    position: absolute;
+    top: 0.45em;
+}
+
+.landing-section input, select {
+    /* -webkit-appearance: none; */
+    /* appearance: none; */
+    /* width: 100% !important; */
+    border-radius: 1px!important;
+    border: 1px solid #d6dde3!important;
+    font-family: 'Open Sans',sans-serif!important;
+    font-size: 15px!important;
+    font-weight: 400!important;
+    line-height: 20px!important;
+    color: #6a6a6a!important;
+    padding: 10px!important;
+    margin: 5px 0!important;
+}
+
+input[type="submit"] {
+    color: var(--text-color)!important;
+    border: 1px solid var(--primary-color)!important;
+}
+
+input[type="submit"]:hover {
+    color: var(--primary-color)!important;
+}
+
+@media (max-width: 950px) {
+    .landing-section {
+        padding: 50px 20px;
+    }
+    .landing-section .float-left {
+        width: 100%;
+        float: none;
+    }
+    
+    .landing-section .float-right {
+        float: none;
+        width: 100%;
+    }
+}

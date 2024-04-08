@@ -1,0 +1,26 @@
+.ccpa-notice {
+	padding: 16px 0;
+}
+
+.otnotice-content .otnotice-sections .otnotice-section-header{
+	text-align:left !important;
+	font-size: 16px;
+	font-weight: bold;
+	color: #7523FF !important;
+}
+
+.otnotice-content .otnotice-sections .otnotice-section-content table tr td{
+	text-align: center !important;
+	padding: 5px;
+	vertical-align: middle !important;	
+}
+
+.otnotice-content .otnotice-sections .otnotice-section-content table tbody tr:nth-child(1){
+	background:#7523FF !important ;
+	color: white !important;
+}
+
+#otnotice-section-7702317d-3d6b-4993-9c51-da230a1a3126 h1{
+text-transform: uppercase;
+color: #7523FF !important;
+}

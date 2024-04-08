@@ -1,0 +1,168 @@
+.model-image .img-colorbox-popup  {
+  margin: 0.6em 0;
+}
+
+.model-image {
+  position: relative;
+}
+
+.model-image .img-colorbox-popup img {
+  width: 100%;
+}
+
+#cboxOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  overflow: hidden;
+  transform: translate3d(0,0,0);
+  background: #0009;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#cboxLoadingOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%
+}
+
+.cboxPhoto {
+  float: left;
+  margin: auto;
+  border: 0;
+  display: block;
+  max-width: none;
+}
+
+#colorbox{
+  box-sizing: content-box;
+  outline: 0;
+  animation: create-box 1s;
+}
+
+#cboxContent {
+  margin-top: 20px;
+  background: #fff;
+  box-sizing: content-box;
+  position: relative;
+}
+
+.picture-wrapper {
+  overflow: auto;
+}
+
+#cboxContent .button {
+  padding: .6em 1em;
+  margin-top: 10px
+}
+
+#cboxClose:active {
+  outline: 0
+}
+
+#cboxOverlay #colorbox #cboxClose {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 32px;
+  height: 32px;
+  padding: 0 !important;
+  font-size: 28px !important;
+  font-family: Arial,Helvetica;
+  line-height: 32px;
+  background-color: #ec8f2d;
+  color: #fff;
+  border-radius: 0 !important;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+
+#cboxClose:hover {
+  background-color: #00000050 !important
+}
+
+#cboxOverlay #colorbox .button.icon-search {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  width: 32px;
+  height: 32px;
+  padding: 0 !important;
+  margin: 0;
+  border: 0;
+  font-size: 16px !important;
+  line-height: 32px;
+  background-color: #ec8f2d;
+  color: #fff;
+  border-radius: 0 !important;
+}
+
+.model-image .icon-search:hover {
+  background-color: #000 !important
+}
+
+@keyframes create-box {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.image-wrapper{
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0 0 0 / 10%);
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.image-wrapper-ani{
+  animation: create-box1 0s;
+}
+
+@keyframes create-box1 {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.5);
+  }
+}
+
+.colorbox-wrapper{
+  position: absolute;
+  z-index: 999;
+}
+
+.picture-overflow-wrap {
+  width: calc(100vw - 400px);
+
+  /* height: calc(100vh - 60px); */
+  max-height: 80vh;
+  overflow: auto;
+
+  @media (max-width: 860px) {
+    width: calc(100vw - 100px);
+  }
+
+  @media (max-width: 768px) {
+    width: calc(100vw - 40px);
+  }
+
+}

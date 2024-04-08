@@ -1,0 +1,41 @@
+/* Default template css */
+.anniversary .default-content-wrapper {
+    text-align: left!important;
+}
+
+.anniversary .default-content-wrapper h2:first-child {
+    margin-top: 0px!important;
+}
+
+.anniversary .sidebar-section #content-wrapper .outer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.anniversary .sidebar-section #content-wrapper #content {
+    padding-bottom: 0px;
+}
+
+.anniversary #main {
+    float: none;
+}
+
+.anniversary #sidebar {
+    position: sticky;
+    top: 130px;
+}
+
+@media (max-width: 960px) {
+    .anniversary #sidebar {
+        top: 80px;
+    }
+}
+
+@media (max-width: 860px) {
+    .anniversary .sidebar-section #content-wrapper .outer {
+        flex-direction: column;
+    }
+    .anniversary #sidebar {
+        max-height: none;
+    }
+}

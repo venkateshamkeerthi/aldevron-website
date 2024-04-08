@@ -1,0 +1,65 @@
+.custom-bg {
+    background-image: url('../../icons/aldevron-solid-orange-background.webp');
+}
+
+.lists {
+    display: flex;
+    justify-content: center;
+    grid-gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    text-align: var(--custom-text-alignment, center);
+    flex-direction: var(--custom-direction, column);
+    min-width: var(--custom-min-width);
+    height: var(--custom-height);
+    height: var(--custom-min-height);
+    width: var(--custom-width, 300px);
+    color: var(--custom-color);
+    word-wrap: break-word;
+    background-color: var(--custom-bg, #fff);
+    background-clip: border-box;
+    border: var(--custom-width) solid var(--custom-border-color);
+    border-radius: var(--custom-border-radius, 3px);
+    transition-property: var(--custom-ts-property, transform);
+    transition-timing-function: var(--custom-ts-timing, cubic-bezier(0.4, 0, 0.2, 1));
+    transition-duration: var(--custom-ts-duration, 150ms);
+    padding: 1rem 0.25rem;
+}
+
+.module-title{
+    text-transform: capitalize;
+}
+  
+.card-header, .card-body, .card-footer {
+    padding: var(--custom-width, 0.75rem 0.5rem);
+}
+  
+.card .card-img img {
+    max-width: 120px;
+    width: 100%;
+    max-height: 130px;
+    height: 100%;
+}
+  
+.card .card-header {
+    background-color: var(--custom-header-color, #fff);
+}
+
+.card .card-header .card-title {
+    font-size: var(--text-size, 1.5rem);
+    line-height: var(--text-line-height, 1.5rem);
+}
+
+.card .card-body {
+    flex: 1 1 auto;
+    background-color: var(--custom-body-color, #fff);
+}
+  
+.card .card-footer {
+    background-color: var(--custom-footer-color, #fff);
+}
+

@@ -1,0 +1,45 @@
+.grey-article-outer {
+    background-color: #ededed;
+    padding: 80px 0;
+}
+
+.grey-article-outer > div {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.recent-posts  {
+    text-align: left;
+}
+
+.recent-posts h1:first-child, .recent-posts h2:first-child {
+    padding-top: 0!important;
+} 
+
+.recent-posts .post .image img {
+    width: 100%;
+    height: auto;
+}
+
+.full-post .text {
+    padding-left: 0!important;
+}
+
+@media (max-width: 1024px) {
+    .grey-article-outer {
+        padding-left: 20px;
+        padding-right: 20px;
+        width: auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .grey-article-outer {
+        padding: 60px 20px;
+    }
+
+    .recent-posts .content .col {
+        width: 100%;
+        margin: 0!important;
+    }
+}

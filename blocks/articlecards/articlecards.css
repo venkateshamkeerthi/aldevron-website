@@ -1,0 +1,282 @@
+.articlecards {
+    padding: 20px 0;
+    text-align: left;
+}
+
+#main .articlecards .wrapper{
+    padding: 0;
+}
+
+.grey-article-outer {
+    background-color: #ededed;
+    padding: 80px 0;
+}
+
+.grey-article-outer > div {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.articlecards .wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4%;
+    padding: 0 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .articlecards .wrapper{
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+    }
+}
+
+.articlecards ul.posts {
+   margin: 0;
+   padding: 0;
+}
+
+.articlecards ul.posts li.post {
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.articlecards .entry-title {
+    padding: 0;
+    line-height: 18px;
+}
+
+.articlecards ul.posts li.post:not(:first-child) .entry-title .redirect-link {
+    font-size: 14px;
+}
+
+.articlecards ul.posts:not(:first-child) li.post:first-child {
+    padding-left: 0;
+}
+
+.articlecards ul.posts li.post:not(:first-child) {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0;
+}
+
+.articlecards ul.posts li.post:not(:first-child) a.article-card-img {
+    flex-shrink: 0.9;
+    padding: 0;
+    margin: 5px 0 0;
+}
+
+.articlecards ul.posts li.post:first-child a.article-card-img img {
+    /* width: 470px;
+    height: 264px; */
+    width: 100%;
+    height: 100%;
+}
+
+.articlecards ul.posts li.post:first-child .article-card-body{
+    padding-top: 20px;
+}
+
+.articlecards .article-card-body a{
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+}
+
+.articlecards .article-card-body a:hover{
+    color: #000;
+    text-decoration: none;
+}
+
+.articlecards .article-lists {
+    display: flex;
+    justify-content: center;
+    grid-gap: 4%;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.articlecards .article-card {
+    position: relative;
+    display: flex;
+    flex: 2 1 auto;
+    text-align: var(--custom-text-alignment, left);
+    flex-direction: var(--custom-direction, column);
+    min-width: var(--custom-min-width);
+    height: var(--custom-height);
+    height: var(--custom-min-height);
+    width: var(--custom-width, 300px);
+    color: var(--custom-color);
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: var(--custom-width) solid var(--custom-border-color);
+    border-radius: var(--custom-border-radius, 3px);
+    transition-property: var(--custom-ts-property, transform);
+    transition-timing-function: var(--custom-ts-timing, cubic-bezier(0.4, 0, 0.2, 1));
+    transition-duration: var(--custom-ts-duration, 150ms);
+    cursor: var(--custom-cursor, pointer);
+    padding: 0 0 30px;
+}
+
+.articlecards ul.posts li.post:first-child .description{
+    padding: .5em 0 0;
+}
+
+.articlecards ul.posts li.post:not(:first-child) .description {
+    font-size: 14px;
+    padding: .5em 0 0;
+    width: 101%;
+}
+
+.articlecards ul.posts:not(:first-child) li.post:first-child .article-card-subtitle{
+    margin-top: 0;
+}
+
+.articlecards ul.posts li.post:last-child {
+    margin-bottom: 30px;
+}
+
+.articlecards .article-card-img img {
+    width: 88%;
+    height: 100%;
+}
+
+.articlecards .article-card .article-card-title {
+    font-size: var(--text-size, 1.5rem);
+    line-height: var(--text-line-height, 1.5rem);
+}
+
+.articlecards .article-card-subtitle {
+    font-family: Brown-Ald,Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #0d233e;
+    letter-spacing: -.02em;
+    margin: 0;
+    padding: 0 0 0.5em;
+}
+
+.articlecards .article-card .redirect-link {
+    padding-top: 20px;
+    font-size: 18px;
+    font-family: Brown-Ald,Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    letter-spacing: -.02em;
+    line-height: normal;
+    margin: 0;
+}
+
+.articlecards .article-card .article-card-body {
+    flex: 1 1 auto;
+}
+
+#main .articlecards .posts .post::before {
+    content: "" !important;
+}
+
+#main .articlecards ul.posts li.post:first-child .article-card-body {
+        padding: 0;
+}
+
+#main .articlecards .post:not(:first-child) .article-card-body .entry-title{
+    font-size: 14px;
+    margin: .35em 0 0.5em;
+}
+
+#main .articlecards ul.posts li.post:not(:first-child) {
+    padding: .65em 0 0;
+}
+
+#main .articlecards ul.posts li.post:first-child .entry-title {
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 479px) {
+    .articlecards .ul.posts li.post {
+        padding: 0 0 30px;
+        margin: 0;
+    }
+
+    .articlecards ul.posts li.post:last-child {
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    .articlecards ul.posts li.post:not(:first-child){
+        display: block;
+    }
+
+    .articlecards ul.posts li.post:first-child a.article-card-img img {
+        height: auto;
+    }
+
+    .articlecards .article-card-body .description {
+       padding: 8px 0 0;
+    }
+
+    .articlecards ul.posts:not(:first-child) {
+        padding: 0;
+    }
+
+    .articlecards ul.posts li.post:not(:first-child) .entry-title {
+        padding: 20px 0 0;
+    }
+
+    .articlecards ul.posts li.post:not(:first-child) .entry-title .redirect-link {
+        font-size: 18px;
+    }
+
+    .articlecards .article-card-img img{
+        width:100%;
+    }
+
+    .articlecards ul.posts li.post:last-child .article-card-body{
+        padding-bottom: 30px;
+    }
+
+    #main .articlecards ul.posts li.post:last-child .article-card-body{
+        padding-bottom: 0;
+    }
+
+    #main .articlecards ul.posts li.post:not(:first-child) .entry-title {
+        margin: 1em 0 .5em;
+        font-size: 18px;
+    }
+
+    #main .articlecards  ul.posts li.post{
+        padding: 0 0 30px !important;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .grey-article-outer {
+        padding: 60px 0;
+    }
+
+    .articlecards ul.posts:not(:first-child) li.post:first-child .article-card-subtitle{
+        margin-top: 30px;
+    }
+
+    #main .articlecards ul.posts li.post:not(:first-child){
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .articlecards .article-card-subtitle{
+        padding: 0 0 .5em;
+        font-size: 24px;
+    }
+
+    #main .articlecards  .post:first-child .entry-title {
+        font-size: 24px;
+    }
+
+    #main .articlecards ul.posts li.post:not(:first-child){
+        padding: 0 0 30px;
+        margin: 0;
+    }
+
+}

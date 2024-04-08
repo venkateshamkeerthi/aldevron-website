@@ -1,0 +1,5 @@
+.order-form .table_order button {
+    font-size: 12px!important;
+    padding: 0.8em 0.9em!important;
+    transition: all 0.3s ease;
+}

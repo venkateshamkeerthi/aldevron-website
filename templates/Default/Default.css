@@ -1,0 +1,38 @@
+/* Default template css */
+.default-content-wrapper {
+    text-align: left!important;
+}
+
+.default-content-wrapper h2:first-child {
+    margin-top: 0px!important;
+}
+
+.outer {
+    display: flex;
+    justify-content: space-between;
+}
+
+#main {
+    float: none;
+}
+
+#sidebar {
+    position: sticky;
+    top: 130px;
+    float: none;
+}
+
+@media (max-width: 960px) {
+    #sidebar {
+        top: 80px;
+    }
+}
+
+@media (max-width: 860px) {
+    .outer {
+        flex-direction: column;
+    }
+    #sidebar {
+        max-height: none;
+    }
+}

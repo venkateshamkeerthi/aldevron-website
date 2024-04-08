@@ -1,0 +1,22 @@
+.heading-top tr:first-child td {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.left-heading {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: left;
+}
+
+.table table table {
+    margin : 0;
+}
+
+.table table table tr {
+    background-color: transparent;
+}
+
+.heading-top table table tr:first-child td {
+    background-color: var(--primary-color)!important;
+}

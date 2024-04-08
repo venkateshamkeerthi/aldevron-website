@@ -1,0 +1,13 @@
+.mmg-tabs {
+    padding: 20px 0;
+}
+
+.tabpanel table tr:first-child td {
+    background-color: var(--primary-color)!important; /* Specify your desired background color here */
+    color: var(--text-color);
+}
+
+.tabs .tabpanel ul + p > em {
+    margin-left: 18px;
+    display: block;
+}

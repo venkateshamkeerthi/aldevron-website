@@ -3,12 +3,64 @@
   flex-direction: column;
 }
 
+.columns picture {
+  display: block;
+  float: none;
+  max-width: none;
+  overflow: hidden;
+  padding-bottom: 56%;
+  position: relative;
+  width: 100%;
+}
+
+.columns picture img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Maintain aspect ratio, fitting the image within the container */
+  transition: all 0.3s ease 0s;
+}
+
+.full-images picture {
+  padding-bottom: 100%!important;
+}
+
+.cover-images picture img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio, fitting the image within the container */
+  transition: all 0.3s ease 0s;
+}
+
+.zoomed-image picture img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio, fitting the image within the container */
+  transition: all 0.3s ease 0s;
+}
+
+.zoomed-image picture:hover img {
+  transform: scale(1.1);
+  transition: all 0.3s ease 0s;
+}
+
 .columns img {
   width: 100%;
 }
 
 .columns > div > div {
   order: 1;
+  position: relative;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
 }
 
 .columns > div > .columns-img-col {
@@ -19,9 +71,19 @@
   display: block;
 }
 
-@media (width >= 900px) {
+.columns.action-buttons .button-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.columns.action-buttons .button-container .button {
+  margin-bottom: -30px;
+}
+
+@media (min-width: 900px) {
   .columns > div {
-    align-items: center;
     flex-direction: unset;
     gap: 32px;
   }
